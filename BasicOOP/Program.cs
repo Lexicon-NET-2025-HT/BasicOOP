@@ -9,7 +9,8 @@ namespace BasicOOP
             Console.WriteLine(v.Drive(50));
             Car c = new Car("BMW", "R39");
             Console.WriteLine(c.Drive(55));
-
+            //v.Stop(); 
+            c.Stop(); 
             //Part1();
         }
 
