@@ -11,6 +11,8 @@ namespace BasicOOP
     {
         private int fuel = 50;
 
+        protected bool ProtectedBool; 
+
         public abstract string Turn();
 
         public virtual string Drive(int distance)
@@ -25,16 +27,17 @@ namespace BasicOOP
         public string Brand { get; set; }
 
         public Vehicle(string brand)
-        {
+        {            
             Brand = brand;
         }
 
         public override string Turn()
         {
+            ProtectedBool = false;
             return "Turning"; 
         }
     }
-    internal class Car : Vehicle, IStoppable
+    internal /*sealed*/ class Car : Vehicle, IStoppable
     {
         public string Model { get; set; }
 
@@ -62,6 +65,7 @@ namespace BasicOOP
 
         public string SpecialMethod()
         {
+            ProtectedBool = true; 
             return "From Saab"; 
         }
     }
