@@ -25,8 +25,11 @@ namespace BasicOOP
                 c
             };
 
-            foreach (IDrivable vehicle in vehicles)
+            foreach (AbstractVehicle vehicle in vehicles)
             {
+                Console.WriteLine(vehicle.Drive(50));
+                Console.WriteLine(vehicle.Turn());
+                Console.WriteLine(vehicle.Drive(50));
                 Console.WriteLine(vehicle.Drive(50));
 
                 //Unsafe case
